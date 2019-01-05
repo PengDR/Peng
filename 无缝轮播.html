@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background: aquamarine;
+        }
+        .wrap{
+            border: 10px solid #ffffff;
+            width: 1226px;
+            height: 460px;
+            position: absolute;
+            margin: 50px ;
+            overflow: hidden;
+        }
+        .list{
+            list-style: none;
+            position: relative;
+            width: 400%;
+            animation: move 15s infinite linear;
+        }
+        .list li{
+            float: left;
+        }
+        @keyframes move{
+            0%{
+                transform: translateX(0px);
+            }
+            20%{
+                transform: translateX(0px);
+            }
+            25%{
+                transform: translateX(-1226px);
+            }
+            45%{
+                transform: translateX(-1226px);
+            }
+            50%{
+                transform: translateX(-2452px);
+            }
+            70%{
+                transform: translateX(-2452px);
+            }
+            75%{
+                transform: translateX(-3678px);
+            }
+            100%{
+                transform: translateX(-3678px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <ul class="list">
+            <li><img src="./img/2.png" alt="" ></li>
+            <li><img src="./img/3.jpg" alt="" ></li>
+            <li><img src="./img/4.jpg" alt="" ></li>
+            <li><img src="./img/2.png" alt="" ></li>
+            <li><img src="./img/5.jpg" alt="" ></li>
+        </ul>
+    </div>
+</body>
+</html>
