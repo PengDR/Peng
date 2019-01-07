@@ -5,68 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script>
+        window.onload=function(){
+            (function(){
+                var box = document.querySelector('#ip');
+                window.addEventListener('devicemotion', function(e) {
+                    var motion = e.accelerationIncludingGravity;
+                    var x = Math.round(motion.x);
+                    var y = Math.round(motion.x);
+                    var z = Math.round(motion.x);
+                    box.innerHTML="x: "+x;
+                    box.innerHTML+="<br/>y: "+y;
+                    box.innerHTML+="<br/>z: "+z;
+                })
+            })()
+        }
+    </script>
     <style>
-        *{
-            margin: 0px;
-            padding: 0px;
-        }
-        body{
-            background: aquamarine;
-        }
-        .wrap{
-            border: 10px solid #ffffff;
-            width: 1226px;
-            height: 460px;
-            position: absolute;
-            margin: 50px ;
-            overflow: hidden;
-        }
-        .list{
-            list-style: none;
-            position: relative;
-            width: 400%;
-            animation: move 15s infinite linear;
-        }
-        .list li{
-            float: left;
-        }
-        @keyframes move{
-            0%{
-                transform: translateX(0px);
-            }
-            20%{
-                transform: translateX(0px);
-            }
-            25%{
-                transform: translateX(-1226px);
-            }
-            45%{
-                transform: translateX(-1226px);
-            }
-            50%{
-                transform: translateX(-2452px);
-            }
-            70%{
-                transform: translateX(-2452px);
-            }
-            75%{
-                transform: translateX(-3678px);
-            }
-            100%{
-                transform: translateX(-3678px);
-            }
+        #ip {
+            background: rgb(98, 158, 236);
+            border-radius: 10px;
+            height: 300px;
+            width: 300px;
+            margin: auto auto;  
+            text-align: center;
+            line-height: 100px;
         }
     </style>
 </head>
 <body>
-    <div class="wrap">
-        <ul class="list">
-            <li><img src="./img/2.png" alt="" ></li>
-            <li><img src="./img/3.jpg" alt="" ></li>
-            <li><img src="./img/4.jpg" alt="" ></li>
-            <li><img src="./img/2.png" alt="" ></li>
-            <li><img src="./img/5.jpg" alt="" ></li>
-        </ul>
-    </div>
+    <div id="ip"></div>
 </body>
 </html>
